@@ -1,0 +1,182 @@
+:root {
+    /* === Background Colors === */
+    --bg-main: #FDFDFE; /* Couleur principale du fond */
+    --bg-alt: #F7F9FF;   /* Couleur alternative (ex : cartes) */
+    --bg-dark: #11131F; /* Couleur sombre pour les thèmes foncés */
+  
+    /* === Interactive Components === */
+    --interactive-primary: #007bff; /* Boutons principaux */
+    --interactive-hover: #0056b3;   /* État hover */
+    --interactive-disabled: #d6d6d6; /* État désactivé */
+  
+    /* === Borders and Separators === */
+    --border-color: #ABBDF9;
+    --separator-color: ##8DA4EF;
+  
+    /* === Solid Colors === */
+    --solid-success: #28a745;  /* Vert succès */
+    --solid-error: #dc3545;    /* Rouge erreur */
+    --solid-warning: #ffc107;  /* Jaune avertissement */
+  
+    /* === Accessible Text === */
+    --text-primary: #000000; /* Texte principal */
+    --text-secondary: #555555; /* Texte secondaire */
+    --text-on-dark: #ffffff;  /* Texte clair sur fond sombre */
+    --text-link: #000000;     /* Liens */
+
+    --text-color: #333333; /* Couleur principale (clair) */
+    --icon-color: #555555; /* Couleur des icônes */
+  
+    --text-color-dark: #ffffff; /* Couleur du texte pour le thème sombre */
+    --icon-color-dark: #4facfe; /* Couleur des icônes pour le thème sombre */
+  }
+  .icon {
+    color: var(--icon-color); /* Couleur des icônes par défaut */
+  }
+  
+  [data-theme="dark"] .icon {
+    color: var(--icon-color-dark); /* Couleur des icônes en thème sombre */
+  }
+
+  [data-theme="dark"] {
+    color: var(--text-color-dark);
+    --bg-main: #11131F;
+    --bg-alt: #141726;
+    --text-primary: #9EB1FF;
+    --text-secondary: #D6E1FF;
+    --interactive-primary: #1D2E62;
+    --interactive-hover: #303374;
+    --border-color: #304384;
+  }
+  
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+  
+  .card {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+  }
+  
+  .dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-on-dark);
+  }
+
+  .btn {
+    background-color: var(--interactive-primary);
+    color: var(--text-on-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: var(--interactive-hover);
+  }
+  
+  .btn:disabled {
+    background-color: var(--interactive-disabled);
+    cursor: not-allowed;
+  }
+  .section-divider {
+    border-top: 1px solid var(--separator-color);
+    margin: 20px 0;
+  }
+  .alert-success {
+    background-color: var(--solid-success);
+    color: var(--text-on-dark);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .alert-error {
+    background-color: var(--solid-error);
+    color: var(--text-on-dark);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+  }
+  
+  p {
+    color: var(--text-secondary);
+  }
+  
+  a {
+    color: var(--text-link);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: bold;
+  }
+        
+  
+
+  .fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .main-card-content {
+    padding: 15px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .profession {
+    font-size: 1rem;
+  }
+
+  .download-cv {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .main-card-content {
+    animation: slide-in 0.8s ease-out;
+  }
+
+  .main-card {
+    background: linear-gradient(to right, var(--bg-main), var(--bg-alt));
+  }

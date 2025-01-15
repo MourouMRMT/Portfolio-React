@@ -1,0 +1,22 @@
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+  
+  .contact-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--text-primary);
+    border-radius: 5px;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    background-color: var(--text-secondary);
+    color: var(--bg-alt);
+  }
+  
