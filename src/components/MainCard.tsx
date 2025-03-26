@@ -35,7 +35,7 @@ const MainCard: React.FC = () => {
         <h1 className="name">Mourougen MARIMOUTOU</h1>
         <p className="profession">Embedded Systems Engineer</p>
         <div className="social-links">
-          <a href="https://github.com/username" target="_blank" rel="noreferrer">
+          <a href="https://github.com/MourouMRMT" target="_blank" rel="noreferrer">
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="40" 
